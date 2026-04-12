@@ -1,0 +1,351 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, #dbeafe 0%, transparent 28%),
+    radial-gradient(circle at top right, #e0e7ff 0%, transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, #f1f5f9 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.hero {
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  color: #475569;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.title {
+  margin: 18px 0 12px;
+  font-size: 54px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin: 0;
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 30px;
+  padding: 28px;
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card-head h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.card-head p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.step {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  color: #4338ca;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+}
+
+.textarea {
+  width: 100%;
+  height: 320px;
+  border: 1px solid #dbe1ea;
+  border-radius: 22px;
+  background: rgba(248, 250, 252, 0.95);
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  resize: none;
+  outline: none;
+  transition: all 0.18s ease;
+}
+
+.textarea:focus {
+  border-color: #60a5fa;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.12);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.primary-link {
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.25);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.14s ease;
+}
+
+.primary-btn:hover,
+.primary-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.3);
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.secondary-btn,
+.secondary-link {
+  border: 1px solid #dbe1ea;
+  background: rgba(255, 255, 255, 0.9);
+  color: #334155;
+  padding: 14px 22px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.14s ease;
+}
+
+.secondary-btn:hover,
+.secondary-link:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.result-box {
+  min-height: 240px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 18px;
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+}
+
+.result-box.small {
+  min-height: 140px;
+}
+
+.question-list {
+  display: grid;
+  gap: 22px;
+}
+
+.question-text {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.7;
+  color: #0f172a;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.choice-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #dbe1ea;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: all 0.14s ease;
+}
+
+.choice-btn:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.choice-btn.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.1);
+}
+
+.choice-btn.correct {
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.choice-btn.wrong {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.choice-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.short-answer-wrap {
+  margin-top: 12px;
+}
+
+.short-answer-input {
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-bottom: 2px solid #cbd5e1;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  padding: 6px 4px;
+  transition: border-color 0.16s ease;
+}
+
+.short-answer-input:focus {
+  border-bottom-color: #2563eb;
+}
+
+.feedback-box {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+}
+
+.feedback-explanation {
+  margin-top: 8px;
+  line-height: 1.75;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+.primary-btn,
+.secondary-btn,
+.primary-link,
+.secondary-link {
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding: 28px 16px 48px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .card-head h2 {
+    font-size: 24px;
+  }
+
+  .textarea {
+    height: 260px;
+  }
+}
