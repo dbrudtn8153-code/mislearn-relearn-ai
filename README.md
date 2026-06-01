@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### 프로젝트 간단 설명
 
-## Getting Started
+---
 
-First, run the development server:
+단순히 정답을 알려주는 것이 아니라, 사용자가 왜 틀렸는지 분석하고 쉬운 설명과 예시를 통해 다시 학습하도록 돕는 것을 목표로 했습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Mislearn → Relearn AI는 사용자가 잘못 이해하고 있는 개념을 AI가 진단하고, 올바른 개념으로 다시 학습할 수 있도록 돕는 오개념 교정 AI 학습 서비스입니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 기획 배경
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+많은 학습자는 문제를 틀렸을 때 정답만 확인하고 넘어가는 경우가 많습니다.
 
-## Learn More
+하지만 학습에서 중요한 것은 단순히 정답을 아는 것이 아니라, 자신이 어떤 개념을 잘못 이해했는지 파악하고 같은 실수를 반복하지 않는 것입니다.
 
-To learn more about Next.js, take a look at the following resources:
+특히 수학, 과학, 프로그래밍처럼 개념이 누적되는 과목에서는 하나의 오개념이 이후 학습 전체에 영향을 줄 수 있습니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Mislearn → Relearn AI는 이러한 문제를 해결하기 위해 사용자의 답변을 분석하고, 오개념을 진단한 뒤 올바른 개념으로 다시 학습하도록 돕는 AI 학습 서비스로 기획했습니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 문제 정의
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+학습자에게 필요한 것은 단순한 정답 제공이 아니라 다음과 같은 질문에 대한 답이라고 보았습니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 내가 왜 이 문제를 틀렸는가?
+- 어떤 개념을 잘못 이해하고 있는가?
+- 정답은 알겠는데, 다시 비슷한 문제를 풀면 왜 또 틀리는가?
+- 내 수준에 맞게 다시 설명해주는 학습 도구가 있는가?
+- 반복되는 오개념을 관리하고 복습할 수 있는가?
+
+### 핵심 기능
+
+---
+
+- 사용자 답변 기반 오개념 진단
+- AI 기반 개념 재설명
+- 틀린 이유 분석
+- 쉬운 예시와 단계별 설명 제공
+- 재학습 후 확인 문제 제공
+- 반복되는 오개념 학습 이력 관리
+- 학습 리포트 및 복습 추천 기능
+
+### 서비스 흐름
+
+---
+
+- 사용자가 문제를 풀거나 개념 설명을 입력한다.
+- Mislearn → Relearn AI가 사용자의 답변을 분석한다.
+- 답변 속에서 오개념 가능성이 있는 부분을 찾는다.
+- 사용자가 잘못 이해한 개념을 쉬운 문장과 예시로 다시 설명한다.
+- 확인 문제를 제공해 개념이 교정되었는지 점검한다.
+- 반복되는 오개념은 학습 이력으로 저장하고 복습을 추천한다.
+
+### 내가 진행한 역할
+
+---
+
+- 서비스 아이디어 기획
+- 사용자 문제 정의
+- 핵심 기능 설계
+- AI 기반 오개념 진단 흐름 구상
+- 재학습 프로세스 설계
+- 학습 이력 관리 기능 구상
+- 서비스명 및 콘셉트 정리
+- 발표/포트폴리오용 문서 구성
+
+### 차별점
+
+---
+
+기존 학습 서비스가 “문제를 맞혔는가, 틀렸는가”에 집중한다면, Mislearn → Relearn AI는 “왜 틀렸는가”에 집중합니다.
+
+Mislearn → Relearn AI는 단순한 AI 질의응답 서비스가 아니라, 학습자의 오개념을 진단하고 올바른 개념으로 다시 학습하도록 돕는 AI 학습 코치 서비스를 지향합니다.
+
+### 향후 개발 방향
+
+---
+
+- 과목별 오개념 데이터 구조화
+- 사용자 답변 분석 로직 고도화
+- AI 재설명 프롬프트 개선
+- 개인별 오개념 히스토리 저장 기능 추가
+- 확인 문제 자동 생성 기능 추가
+- 학습 리포트 및 복습 추천 기능 추가
+
+### 배운 점
+
+---
+
+Mislearn → Relearn AI를 기획하며 교육 서비스에서 중요한 것은 단순히 많은 정보를 제공하는 것이 아니라, 사용자가 어디서 잘못 이해했는지를 찾고 다시 이해할 수 있도록 돕는 구조라는 것을 배웠습니다.
+
+특히 AI를 학습 서비스에 적용할 때는 단순히 답변을 생성하는 것보다, 사용자의 문제 상황을 분석하고 적절한 학습 흐름을 설계하는 것이 중요하다는 점을 고민하게 되었습니다
